@@ -20,10 +20,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgetUserNameButtonPressed() {
+        showAlert(with: "Oops!", and: "Your user name is User")
+        }
     }
-    @IBAction func forgetPassordButtonPressed() {
-    }
-}
 
 // MARK: - Private Methods
 extension ViewController {
