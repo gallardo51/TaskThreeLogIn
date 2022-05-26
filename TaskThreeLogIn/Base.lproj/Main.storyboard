@@ -53,6 +53,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Forget Password?">
                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgetPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="59O-YM-TP7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
