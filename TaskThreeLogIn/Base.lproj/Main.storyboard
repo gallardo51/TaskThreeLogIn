@@ -43,6 +43,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Forget User Name?">
                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgetUserNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WI-Wa-ylT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAO-JE-Iqe">
                                         <rect key="frame" x="171" y="0.0" width="156" height="31.333333333333332"/>
@@ -50,6 +53,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Forget Password?">
                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgetPassordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="fit-xm-pOj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -62,6 +68,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="2PK-HI-eEH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -75,6 +84,10 @@
                             <constraint firstItem="6WM-WC-Npn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="zna-yn-xKK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextFiled" destination="K6F-GO-hAZ" id="uOo-nt-hgR"/>
+                        <outlet property="userNameTextField" destination="4Zf-3v-jUc" id="drE-5D-Yls"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
