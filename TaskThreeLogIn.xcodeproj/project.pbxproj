@@ -63,8 +63,8 @@
 				BA1B1D05283D59E300F9BF91 /* ViewController.swift */,
 				BA1B1D152840C7F600F9BF91 /* WelcomeViewController.swift */,
 				BA1B1D07283D59E300F9BF91 /* Main.storyboard */,
-				BA1B1D0A283D59E300F9BF91 /* Assets.xcassets */,
 				BA1B1D0C283D59E300F9BF91 /* LaunchScreen.storyboard */,
+				BA1B1D0A283D59E300F9BF91 /* Assets.xcassets */,
 				BA1B1D0F283D59E300F9BF91 /* Info.plist */,
 			);
 			path = TaskThreeLogIn;

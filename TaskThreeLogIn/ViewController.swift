@@ -7,6 +7,9 @@
 
 import UIKit
 
+let userName = "User"
+let password = "Password"
+
 class ViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextFiled: UITextField!
