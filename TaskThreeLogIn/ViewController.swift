@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func logInButtonPressed() {
+        guard let inputText = userNameTextField.text, !inputText.isEmpty else {
+            showAlert(with: "User Name is empty", and: "Please, enter user name")
+            return
+        }
     }
     
     @IBAction func forgetUserNameButtonPressed() {
