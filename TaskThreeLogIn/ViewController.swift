@@ -21,11 +21,13 @@ class ViewController: UIViewController {
 
     @IBAction func logInButtonPressed() {
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
-            showAlert(with: "User Name is empty", and: "Please, enter user name")
+            showAlert(with: "User Name is empty",
+            and: "Please, enter user name")
             return
         }
         if let _ = Double(inputText) {
-            showAlert(with: "Wrong format", and: "Please, enter words")
+            showAlert(with: "Wrong format",
+            and: "Please, enter words")
         }
     }
     
@@ -40,7 +42,9 @@ class ViewController: UIViewController {
 // MARK: - Private Methods
 extension ViewController {
     private func showAlert(with title: String, and massage: String) {
-        let alert = UIAlertController(title: title, message: massage, preferredStyle: .alert)
+        let alert = UIAlertController(title: title,
+        message: massage,
+        preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.passwordTextFiled.text = ""
         }
