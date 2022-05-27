@@ -21,6 +21,9 @@ class ViewController: UIViewController {
             showAlert(with: "User Name is empty", and: "Please, enter user name")
             return
         }
+        if let _ = Double(inputText) {
+            showAlert(with: "Wrong format", and: "Please, enter words")
+        }
     }
     
     @IBAction func forgetUserNameButtonPressed() {
