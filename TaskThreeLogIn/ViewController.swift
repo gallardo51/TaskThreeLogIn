@@ -20,6 +20,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func logInButtonPressed() {
+        
+        let userName = userNameTextField.text
+        let password = passwordTextFiled.text
+        
+        
+        if userName == "User" || password == "Password" {
+                 func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                     guard segue.destination is WelcomeViewController
+                 else {return
+                 }
+                 }
+        }
+        
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
             showAlert(with: "User Name is empty",
             and: "Please, enter user name")
