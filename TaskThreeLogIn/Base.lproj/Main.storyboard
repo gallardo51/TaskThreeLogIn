@@ -146,6 +146,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fdy-NR-5rT"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="zlI-gy-nW3" id="Jme-P6-5sB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ok-mU-eTj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
