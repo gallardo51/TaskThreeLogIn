@@ -7,12 +7,19 @@
 
 import UIKit
 
-let userName = "User"
-let password = "Password"
-
 class ViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextFiled: UITextField!
+    
+    private let user = "User"
+    private let password = "Password"
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else
+        { return }
+        welcomeVC.user = user
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +27,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func logInButtonPressed() {
-        
-        let userName = userNameTextField.text
-        let password = passwordTextFiled.text
-        
-        
-        if userName == "User" || password == "Password" {
-                 func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                     guard segue.destination is WelcomeViewController
-                 else {return
-                 }
-                 }
+        if userNameTextField.text != user || passwordTextFiled.text != password {
+            showAlert(with: "Your made a mistake",
+            and: "Please, enter correct login or password")
         }
+            
         
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
             showAlert(with: "User Name is empty",
@@ -42,13 +42,18 @@ class ViewController: UIViewController {
             showAlert(with: "Wrong format",
             and: "Please, enter words")
         }
-    }
+        guard let inputTextTwo = passwordTextFiled.text, !inputTextTwo.isEmpty else {
+            showAlert(with: "I need your password",
+            and: "Please, enter your password")
+            return
+        }
+        }
     
     @IBAction func forgetUserNameButtonPressed() {
-        showAlert(with: "Oops!", and: "Your user name is User😉")
+        showAlert(with: "Oops!", and: "Your user name is \(user)😉")
         }
     @IBAction func forgetPasswordButtonPressed() {
-        showAlert(with: "Oops!", and: "Your password is Password😜")
+        showAlert(with: "Oops!", and: "Your password is \(password)😜")
     }
 }
 
