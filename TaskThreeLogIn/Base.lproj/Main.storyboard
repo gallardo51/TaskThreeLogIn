@@ -103,16 +103,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="yQS-Ke-W3M">
-                                <rect key="frame" x="180" y="194" width="54" height="116.33333333333331"/>
+                                <rect key="frame" x="178" y="144" width="58" height="124.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-gy-nW3">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jB-Dc-DQz">
-                                        <rect key="frame" x="0.0" y="56.333333333333343" width="54" height="60"/>
+                                        <rect key="frame" x="0.0" y="64.666666666666657" width="58" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuY-tM-TRd">
-                                <rect key="frame" x="147" y="440.33333333333331" width="120.33333333333331" height="46"/>
+                                <rect key="frame" x="147" y="398.66666666666669" width="120.33333333333331" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VuY-tM-TRd" secondAttribute="height" multiplier="60:23" id="p90-DR-UL1"/>
                                 </constraints>
@@ -138,11 +138,11 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lbs-Lh-IWK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
                             <constraint firstItem="yQS-Ke-W3M" firstAttribute="centerX" secondItem="ST1-fG-JAv" secondAttribute="centerX" id="ChL-Ph-uVj"/>
                             <constraint firstItem="VuY-tM-TRd" firstAttribute="centerX" secondItem="ST1-fG-JAv" secondAttribute="centerX" id="VHB-om-TrV"/>
-                            <constraint firstItem="yQS-Ke-W3M" firstAttribute="top" secondItem="lbs-Lh-IWK" secondAttribute="top" constant="150" id="ZeH-fk-SDl"/>
+                            <constraint firstItem="yQS-Ke-W3M" firstAttribute="top" secondItem="lbs-Lh-IWK" secondAttribute="top" constant="100" id="ZeH-fk-SDl"/>
                             <constraint firstItem="VuY-tM-TRd" firstAttribute="top" secondItem="yQS-Ke-W3M" secondAttribute="bottom" constant="130" id="oXA-Hh-zRe"/>
                         </constraints>
                     </view>
@@ -160,6 +160,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
