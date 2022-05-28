@@ -27,12 +27,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func logInButtonPressed() {
-        if userNameTextField.text != user || passwordTextFiled.text != password {
-            showAlert(with: "Your made a mistake",
-            and: "Please, enter correct login or password")
-        }
             
-        
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
             showAlert(with: "User Name is empty",
             and: "Please, enter user name")
@@ -46,6 +41,10 @@ class ViewController: UIViewController {
             showAlert(with: "I need your password",
             and: "Please, enter your password")
             return
+        }
+        if userNameTextField.text != user || passwordTextFiled.text != password {
+            showAlert(with: "Your made a mistake",
+            and: "Please, enter correct login or password")
         }
         }
     
