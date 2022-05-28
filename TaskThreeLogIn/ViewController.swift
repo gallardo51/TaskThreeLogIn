@@ -22,36 +22,36 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
-
+    
     @IBAction func logInButtonPressed() {
-            
+        
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
             showAlert(with: "User Name is empty🤷‍♂️",
-            and: "Please, enter user name")
+                      and: "Please, enter user name")
             return
         }
         if let _ = Double(inputText) {
             showAlert(with: "Wrong format🤔",
-            and: "Please, enter letters in user name")
+                      and: "Please, enter letters in user name")
         }
-        guard let inputTextTwo = passwordTextFiled.text, !inputTextTwo.isEmpty else {
+        guard let inputTextTwo = passwordTextFiled.text, !inputTextTwo.isEmpty
+        else {
             showAlert(with: "I need your password🤨",
-            and: "Please, enter your password")
+                      and: "Please, enter your password")
             return
         }
         if userNameTextField.text != user || passwordTextFiled.text != password {
             showAlert(with: "Your made a mistake🤭",
-            and: "Please, enter correct login or password",
-            textField: passwordTextFiled
+                      and: "Please, enter correct login or password",
+                      textField: passwordTextFiled
             )
         }
-        }
+    }
     
     @IBAction func forgetUserNameButtonPressed() {
         showAlert(with: "Oops!", and: "Your user name is \(user)😉")
-        }
+    }
     @IBAction func forgetPasswordButtonPressed() {
         showAlert(with: "Oops!", and: "Your password is \(password)😜")
     }
@@ -63,14 +63,31 @@ class ViewController: UIViewController {
 
 // MARK: - Private Methods
 extension ViewController {
-    private func showAlert(with title: String, and massage: String, textField: UITextField? = nil) {
+    private func showAlert(with title: String,
+                           and massage: String,
+                           textField: UITextField? = nil) {
         let alert = UIAlertController(title: title,
-        message: massage,
-        preferredStyle: .alert)
+                                      message: massage,
+                                      preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+extension ViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passwordTextFiled.becomeFirstResponder()
+        } else {
+            logInButtonPressed()
+            performSegue(withIdentifier: "Welcome", sender: nil)
+        }
+        return true
     }
 }
