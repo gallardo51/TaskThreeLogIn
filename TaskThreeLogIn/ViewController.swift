@@ -7,13 +7,12 @@
 
 import UIKit
 
+private let user = "User"
+private let password = "Password"
+
 class ViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextFiled: UITextField!
-    
-    private let user = "User"
-    private let password = "Password"
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else
@@ -54,16 +53,20 @@ class ViewController: UIViewController {
     @IBAction func forgetPasswordButtonPressed() {
         showAlert(with: "Oops!", and: "Your password is \(password)😜")
     }
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextFiled.text = ""
+    }
 }
 
 // MARK: - Private Methods
 extension ViewController {
-    private func showAlert(with title: String, and massage: String) {
+    private func showAlert(title: String, massage: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title,
         message: massage,
         preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordTextFiled.text = ""
+            textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
