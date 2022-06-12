@@ -5,8 +5,6 @@
 //  Created by Александр Соболев on 12.06.2022.
 //
 
-import Foundation
-
 struct User {
     let login: String
     let password: String
@@ -17,7 +15,7 @@ struct User {
             login: "User",
             password: "Password",
             person: Person.getPerson()
-            )
+        )
     }
 }
 struct Person {
@@ -26,7 +24,7 @@ struct Person {
     let image: String
     
     var nameSurname: String {
-        "\(name) \(surname)"
+        "\(name) \(surname)"
     }
     
     static func getPerson() -> Person {
