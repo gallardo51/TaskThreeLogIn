@@ -11,19 +11,22 @@ private let user = "User"
 private let password = "Password"
 
 class ViewController: UIViewController {
+    
+    //MARK: - IB Outlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextFiled: UITextField!
     
+    //MARK: - Private properties
+    private let user = "User"
+    private let password = "Password"
+    
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else
-        { return }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.user = user
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    //MARK: - IBActions
     @IBAction func logInButtonPressed() {
         
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
