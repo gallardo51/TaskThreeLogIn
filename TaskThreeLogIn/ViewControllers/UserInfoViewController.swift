@@ -9,6 +9,12 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
     
+    @IBOutlet weak var userBornDataLabel: UILabel!
+    @IBOutlet weak var userCityFromLabel: UILabel!
+    @IBOutlet weak var userCellPhoneLabel: UILabel!
+    @IBOutlet weak var userPetsLabel: UILabel!
+    
+    
     var user: User!
     
     override func viewDidLoad() {
@@ -19,5 +25,7 @@ class UserInfoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let imageVC = segue.destination as? ImageViewController else { return }
         imageVC.user = user
+    }
+    @IBAction func photoButtonPressed() {
     }
 }
