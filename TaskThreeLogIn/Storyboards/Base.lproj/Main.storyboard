@@ -76,7 +76,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="2PK-HI-eEH"/>
-                                    <segue destination="9L9-QQ-t6T" kind="presentation" modalPresentationStyle="fullScreen" id="hQV-0g-o0L"/>
+                                    <segue destination="9L9-QQ-t6T" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="hQV-0g-o0L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,39 +171,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FNx-NJ-D0D">
-                                <rect key="frame" x="174" y="288" width="66" height="320"/>
+                                <rect key="frame" x="151.5" y="288" width="111" height="320"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jR-Qw-72w">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwr-g1-KzB">
-                                        <rect key="frame" x="0.0" y="70" width="66" height="40"/>
+                                        <rect key="frame" x="0.0" y="70" width="111" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57p-dP-2xX">
-                                        <rect key="frame" x="0.0" y="140" width="66" height="40"/>
+                                        <rect key="frame" x="0.0" y="140" width="111" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" systemColor="systemTealColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSf-oi-x9C">
-                                        <rect key="frame" x="0.0" y="210" width="66" height="40"/>
+                                        <rect key="frame" x="0.0" y="210" width="111" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37i-Ci-wra">
-                                        <rect key="frame" x="0.0" y="280" width="66" height="40"/>
+                                        <rect key="frame" x="0.0" y="280" width="111" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="User Photo"/>
                                         <connections>
                                             <action selector="photoButtonPressed" destination="rCj-uP-MCo" eventType="touchUpInside" id="oMJ-ut-f2N"/>
+                                            <segue destination="B4K-8b-sqB" kind="show" id="7pb-9Q-oSj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -222,7 +223,6 @@
                         <outlet property="userCellPhoneLabel" destination="57p-dP-2xX" id="kVL-Bi-1kK"/>
                         <outlet property="userCityFromLabel" destination="uwr-g1-KzB" id="y3s-MP-lju"/>
                         <outlet property="userPetsLabel" destination="wSf-oi-x9C" id="XC0-iB-Nmj"/>
-                        <segue destination="B4K-8b-sqB" kind="show" identifier="MoreInfo" id="xOh-d6-ot3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXT-Zg-HtA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
