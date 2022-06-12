@@ -9,6 +9,12 @@ import UIKit
 
 class ImageViewController: UIViewController {
     
+    @IBOutlet weak var userPhotoImageView: UIImageView! {
+        didSet {
+            userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.height / 2
+        }
+    }
+    
     private let primaryColor = UIColor(
         red: 210/255,
         green: 109/255,
@@ -24,8 +30,8 @@ class ImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        userPhotoImageView.image = UIImage(named: user.person.image)
     }
     
 
