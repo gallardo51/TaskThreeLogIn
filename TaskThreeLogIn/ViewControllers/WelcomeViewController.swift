@@ -28,11 +28,6 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         welcomeLabel.text = "Welcome, \(user)!"
-
-        
-    }
-    @IBAction func logOutButtonPressed() {
-        dismiss(animated: true)
     }
 }
 //MARK: - Set background color

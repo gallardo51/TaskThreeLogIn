@@ -58,9 +58,10 @@
 		BA1B1D00283D59E300F9BF91 /* TaskThreeLogIn */ = {
 			isa = PBXGroup;
 			children = (
-				BA7A71D1285617A700135677 /* App */,
+				BA7A71D2285618A500135677 /* Models */,
 				BA7A71CE285616EB00135677 /* ViewControllers */,
 				BA7A71CF2856171200135677 /* Storyboards */,
+				BA7A71D1285617A700135677 /* App */,
 				BA7A71D02856176400135677 /* Resources */,
 			);
 			path = TaskThreeLogIn;
@@ -100,6 +101,13 @@
 				BA1B1D0F283D59E300F9BF91 /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		BA7A71D2285618A500135677 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
