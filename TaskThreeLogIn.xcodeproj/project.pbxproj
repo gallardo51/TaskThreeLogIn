@@ -58,16 +58,48 @@
 		BA1B1D00283D59E300F9BF91 /* TaskThreeLogIn */ = {
 			isa = PBXGroup;
 			children = (
-				BA1B1D01283D59E300F9BF91 /* AppDelegate.swift */,
-				BA1B1D03283D59E300F9BF91 /* SceneDelegate.swift */,
-				BA1B1D05283D59E300F9BF91 /* ViewController.swift */,
-				BA1B1D152840C7F600F9BF91 /* WelcomeViewController.swift */,
-				BA1B1D07283D59E300F9BF91 /* Main.storyboard */,
-				BA1B1D0C283D59E300F9BF91 /* LaunchScreen.storyboard */,
-				BA1B1D0A283D59E300F9BF91 /* Assets.xcassets */,
-				BA1B1D0F283D59E300F9BF91 /* Info.plist */,
+				BA7A71D1285617A700135677 /* App */,
+				BA7A71CE285616EB00135677 /* ViewControllers */,
+				BA7A71CF2856171200135677 /* Storyboards */,
+				BA7A71D02856176400135677 /* Resources */,
 			);
 			path = TaskThreeLogIn;
+			sourceTree = "<group>";
+		};
+		BA7A71CE285616EB00135677 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA1B1D05283D59E300F9BF91 /* ViewController.swift */,
+				BA1B1D152840C7F600F9BF91 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BA7A71CF2856171200135677 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BA1B1D0C283D59E300F9BF91 /* LaunchScreen.storyboard */,
+				BA1B1D07283D59E300F9BF91 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BA7A71D02856176400135677 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA1B1D0A283D59E300F9BF91 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA7A71D1285617A700135677 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BA1B1D01283D59E300F9BF91 /* AppDelegate.swift */,
+				BA1B1D03283D59E300F9BF91 /* SceneDelegate.swift */,
+				BA1B1D0F283D59E300F9BF91 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBC2FW8GZY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskThreeLogIn/Info.plist;
+				INFOPLIST_FILE = TaskThreeLogIn/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TaskThreeLogIn;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -325,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBC2FW8GZY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskThreeLogIn/Info.plist;
+				INFOPLIST_FILE = TaskThreeLogIn/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TaskThreeLogIn;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
