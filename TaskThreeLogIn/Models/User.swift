@@ -21,6 +21,10 @@ struct User {
 struct Person {
     let name: String
     let surname: String
+    let bornData: String
+    let cityFrom: String
+    let cellPhone: String
+    let userPets: String
     let image: String
     
     var nameSurname: String {
