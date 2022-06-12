@@ -32,6 +32,6 @@ struct Person {
     }
     
     static func getPerson() -> Person {
-        Person(name: "Alex", surname: "Sobolev", bornData: "08.07.1988", cityFrom: "Воронеж", cellPhone: "89610297502", userPets: "Собака", image: "AlexPhoto")
+        Person(name: "Alex", surname: "Sobolev", bornData: "08.07.1988", cityFrom: "Воронеж", cellPhone: "89610297502", userPets: "Собака", image: "AlexPH")
     }
 }
