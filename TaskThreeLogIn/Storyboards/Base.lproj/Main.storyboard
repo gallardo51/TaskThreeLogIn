@@ -169,7 +169,7 @@
                             <constraint firstItem="VuY-tM-TRd" firstAttribute="top" secondItem="yQS-Ke-W3M" secondAttribute="bottom" constant="130" id="oXA-Hh-zRe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="voG-Xq-V4W"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person" catalog="system" id="voG-Xq-V4W"/>
                     <navigationItem key="navigationItem" id="fdy-NR-5rT"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="zlI-gy-nW3" id="Jme-P6-5sB"/>
@@ -219,7 +219,7 @@
         <scene sceneID="fQo-B9-VnT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wbS-Bx-vNX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="PEi-KD-HSC"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.fill" catalog="system" id="PEi-KD-HSC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N2F-WX-g1e">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -236,6 +236,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
