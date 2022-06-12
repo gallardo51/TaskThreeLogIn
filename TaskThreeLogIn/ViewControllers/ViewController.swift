@@ -17,13 +17,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextFiled: UITextField!
     
     //MARK: - Private properties
-    private let user = "User"
-    private let password = "Password"
+    private let user = User.getUserData()
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if navigationVC = $0 as? UINavigationController {
+                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+                userInfoVC.user = user
+            }
+        }
     }
     
     //MARK: - IBActions
@@ -44,7 +52,7 @@ class ViewController: UIViewController {
                       and: "Please, enter your password")
             return
         }
-        if userNameTextField.text != user || passwordTextFiled.text != password {
+        if userNameTextField.text != user.login || passwordTextFiled.text != user.password {
             showAlert(with: "Your made a mistake🤭",
                       and: "Please, enter correct login or password",
                       textField: passwordTextFiled
