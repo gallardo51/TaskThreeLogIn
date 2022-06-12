@@ -20,6 +20,10 @@ class UserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = user.person.nameSurname
+        userBornDataLabel.text = "Дата рождения: \(user.person.bornData)"
+        userCityFromLabel.text = "Родной город: \(user.person.cityFrom)"
+        userCellPhoneLabel.text = "Номер телефона: \(user.person.cellPhone)"
+        userPetsLabel.text = "Домашнее животное: \(user.person.userPets)"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
