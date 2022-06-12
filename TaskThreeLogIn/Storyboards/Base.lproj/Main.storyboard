@@ -229,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="922" y="307"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="7Mj-b4-OxO">
             <objects>
-                <viewController id="B4K-8b-sqB" sceneMemberID="viewController">
+                <viewController id="B4K-8b-sqB" customClass="ImageViewController" customModule="TaskThreeLogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TnV-kU-Rll">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
