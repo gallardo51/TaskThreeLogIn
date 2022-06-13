@@ -30,6 +30,7 @@ class UserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = user.person.nameSurname
+        
         userBornDataLabel.text = "Дата рождения: \(user.person.bornData)"
         userCityFromLabel.text = "Родной город: \(user.person.cityFrom)"
         userCellPhoneLabel.text = "Номер телефона: \(user.person.cellPhone)"

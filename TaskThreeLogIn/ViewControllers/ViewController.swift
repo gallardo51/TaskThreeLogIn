@@ -61,10 +61,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgetUserNameButtonPressed() {
-        showAlert(with: "Oops!", and: "Your user name is \(user)😉")
+        showAlert(with: "Oops!", and: "Your user name is \(user.login)😉")
     }
     @IBAction func forgetPasswordButtonPressed() {
-        showAlert(with: "Oops!", and: "Your password is \(password)😜")
+        showAlert(with: "Oops!", and: "Your password is \(user.password)😜")
     }
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userNameTextField.text = ""
@@ -74,12 +74,8 @@ class ViewController: UIViewController {
 
 // MARK: - Private Methods
 extension ViewController {
-    private func showAlert(with title: String,
-                           and massage: String,
-                           textField: UITextField? = nil) {
-        let alert = UIAlertController(title: title,
-                                      message: massage,
-                                      preferredStyle: .alert)
+    private func showAlert(with title: String, and massage: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: massage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""
         }
