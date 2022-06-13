@@ -7,9 +7,6 @@
 
 import UIKit
 
-private let user = "User"
-private let password = "Password"
-
 class ViewController: UIViewController {
     
     //MARK: - IB Outlets
